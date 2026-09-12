@@ -24,11 +24,11 @@ function Hero() {
         </p>
 
         <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-          <button className="brand-gradient rounded-lg px-6 py-3 font-medium text-white">
+          <button className="cursor-pointer brand-gradient rounded-lg px-6 py-3 font-medium text-white">
             Explore Technologies
           </button>
 
-          <button className="rounded-lg border border-slate-300 px-6 py-3 font-medium text-slate-700 hover:bg-slate-100">
+          <button className="cursor-pointer rounded-lg border border-slate-300 px-6 py-3 font-medium text-slate-700 hover:bg-slate-100">
             View Projects
           </button>
         </div>

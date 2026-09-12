@@ -19,7 +19,7 @@ function MyStack({ selectedTechnologies, setSelectedTechnologies }: MyStackProps
     }
 
     return (
-        <div className="w-72 rounded-2xl border border-slate-200 bg-white p-5">
+        <div className="w-full rounded-2xl border border-slate-200 bg-white p-5 lg:w-72">
 
             <h2 className="text-lg font-bold text-slate-800"> Your Stack </h2>
 
@@ -51,7 +51,7 @@ function MyStack({ selectedTechnologies, setSelectedTechnologies }: MyStackProps
                         </div>
 
                         <button onClick={() => handleRemove(technology.id)}
-                            className="text-xl text-slate-400"> ✕ </button>
+                            className="cursor-pointer text-xl text-slate-400"> ✕ </button>
 
 
                     </div>
@@ -65,7 +65,7 @@ function MyStack({ selectedTechnologies, setSelectedTechnologies }: MyStackProps
             {selectedTechnologies.length > 0 && (
 
                 <button onClick={handleRemoveAll}
-                    className="mt-8 w-full rounded-lg border border-red-300 py-2 text-sm font-semibold text-red-500">
+                    className="cursor-pointer mt-8 w-full rounded-lg border border-red-300 py-2 text-sm font-semibold text-red-500">
                     Remove All </button>
 
             )}

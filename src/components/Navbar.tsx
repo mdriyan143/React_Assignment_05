@@ -21,30 +21,25 @@ function Navbar() {
         <ul className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a
-                href={link.href}
-                className="text-sm font-medium text-slate-600 hover:text-pink-500"
-              >
-                {link.label}
-              </a>
+              <a href={link.href}
+                className="text-sm font-medium text-slate-600 hover:text-pink-500">
+                {link.label} </a>
             </li>
           ))}
         </ul>
 
         <div className="hidden items-center gap-4 md:flex">
-          <button className="text-sm font-medium text-slate-700 hover:text-pink-500">
+          <button className="cursor-pointer text-sm font-medium text-slate-700 hover:text-pink-500">
             Sign In
           </button>
 
-          <button className="brand-gradient rounded-lg px-5 py-2 text-sm font-medium text-white">
-            Get Started
-          </button>
+          <button className="cursor-pointer brand-gradient rounded-lg px-5 py-2 text-sm font-medium text-white">
+            Get Started </button>
         </div>
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="text-2xl text-slate-700 md:hidden"
-        >
+          className="cursor-pointer text-2xl text-slate-700 md:hidden">
           {isOpen ? <HiX /> : <HiMenu />}
         </button>
       </nav>
@@ -54,24 +49,22 @@ function Navbar() {
           <ul className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a
-                  href={link.href}
+                <a href={link.href}
                   className="text-sm font-medium text-slate-600 hover:text-pink-500"
-                  onClick={() => setIsOpen(false)}
-                >
+                  onClick={() => setIsOpen(false)}>
                   {link.label}
                 </a>
               </li>
             ))}
 
             <li>
-              <button className="text-sm font-medium text-slate-700">
+              <button className="cursor-pointer text-sm font-medium text-slate-700">
                 Sign In
               </button>
             </li>
 
             <li>
-              <button className="brand-gradient rounded-lg px-5 py-2 text-sm font-medium text-white">
+              <button className="cursor-pointer brand-gradient rounded-lg px-5 py-2 text-sm font-medium text-white">
                 Get Started
               </button>
             </li>

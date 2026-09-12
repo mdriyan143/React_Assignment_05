@@ -25,9 +25,9 @@ function Technology({ technologiesPromise, selectedTechnologies, setSelectedTech
         Discover modern technologies and choose the perfect tools for your
         development stack. </p>
 
-      <div className="mt-10 flex gap-8">
+      <div className="mt-10 flex flex-col gap-8 lg:flex-row">
 
-        <div className="grid flex-1 grid-cols-3 gap-6">
+        <div className="grid flex-1 grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {technologies.map((technology) => (
             <TechnologyCard key={technology.id}
               technology={technology}

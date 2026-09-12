@@ -62,7 +62,7 @@ function TechnologyCard({ technology, selectedTechnologies, setSelectedTechnolog
 
       <button
         onClick={handleTechnologyAdd}
-        className="brand-gradient mt-5 w-full rounded-lg px-4 py-2 font-medium text-white">
+        className="cursor-pointer brand-gradient mt-5 w-full rounded-lg px-4 py-2 font-medium text-white">
         Add to Stack
       </button>
 
