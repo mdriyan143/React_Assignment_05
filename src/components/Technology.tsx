@@ -1,6 +1,7 @@
 import { use } from "react";
 import type { TechnologyType } from "../types";
 import TechnologyCard from "./TechnologyCard";
+import MyStack from "./MyStack";
 
 interface TechnologyProps {
 
@@ -10,7 +11,7 @@ interface TechnologyProps {
 
 }
 
-function Technology({technologiesPromise, selectedTechnologies, setSelectedTechnologies}: TechnologyProps) {
+function Technology({ technologiesPromise, selectedTechnologies, setSelectedTechnologies }: TechnologyProps) {
 
   const technologies = use(technologiesPromise);
 
@@ -22,16 +23,24 @@ function Technology({technologiesPromise, selectedTechnologies, setSelectedTechn
 
       <p className="mx-auto mt-4 max-w-2xl text-center text-slate-600">
         Discover modern technologies and choose the perfect tools for your
-        development stack.
-      </p>
+        development stack. </p>
 
-      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {technologies.map((technology) => (
-          <TechnologyCard key={technology.id} technology={technology} 
-          selectedTechnologies={selectedTechnologies} setSelectedTechnologies={setSelectedTechnologies}/>
-        ))
-        }
+      <div className="mt-10 flex gap-8">
+
+        <div className="grid flex-1 grid-cols-3 gap-6">
+          {technologies.map((technology) => (
+            <TechnologyCard key={technology.id}
+              technology={technology}
+              selectedTechnologies={selectedTechnologies} setSelectedTechnologies={setSelectedTechnologies} />
+          ))
+          }
+        </div>
+
+        <MyStack selectedTechnologies={selectedTechnologies} setSelectedTechnologies={setSelectedTechnologies} />
+
+
       </div>
+
     </section>
   );
 }
