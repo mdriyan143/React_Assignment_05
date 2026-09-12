@@ -9,7 +9,11 @@ interface TechnologyCardProps {
 
 }
 
-function TechnologyCard({ technology, selectedTechnologies, setSelectedTechnologies}: TechnologyCardProps) {
+function TechnologyCard({ technology, selectedTechnologies, setSelectedTechnologies }: TechnologyCardProps) {
+
+  const isAdded = selectedTechnologies.find(
+    (item) => item.id === technology.id
+  );
 
   function handleTechnologyAdd() {
 
@@ -36,7 +40,7 @@ function TechnologyCard({ technology, selectedTechnologies, setSelectedTechnolog
     <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
 
       <div className="flex items-start justify-between">
-        <img src={technology.icon} alt={technology.name} className="h-12 w-12"/>
+        <img src={technology.icon} alt={technology.name} className="h-12 w-12" />
 
         <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">
           {technology.badge}</span>
@@ -62,8 +66,12 @@ function TechnologyCard({ technology, selectedTechnologies, setSelectedTechnolog
 
       <button
         onClick={handleTechnologyAdd}
-        className="cursor-pointer brand-gradient mt-5 w-full rounded-lg px-4 py-2 font-medium text-white">
-        Add to Stack
+        disabled={isAdded}
+
+        className={`mt-5 w-full rounded-lg px-4 py-2 font-medium text-white ${isAdded ? 
+        "cursor-not-allowed opacity-50 brand-gradient" : "cursor-pointer brand-gradient"}`}>
+
+        {isAdded ? "✓ Added to Stack" : "Add to Stack"}
       </button>
 
     </div>
