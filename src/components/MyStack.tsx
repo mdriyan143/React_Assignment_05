@@ -8,7 +8,7 @@ interface MyStackProps {
 
 function MyStack({ selectedTechnologies, setSelectedTechnologies }: MyStackProps) {
 
-    function handleRemove(id: number) {
+    function handleRemove(id: string) {
         const remainingTechnologies = selectedTechnologies.filter(
             (technology) => technology.id !== id);
 
