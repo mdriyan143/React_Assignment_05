@@ -4,7 +4,7 @@ function Hero() {
   return (
     <section
       id="home"
-      className="mx-auto flex min-h-[600px] max-w-6xl flex-col items-center justify-center gap-12 px-4 py-16 lg:flex-row"
+      className="mx-auto flex min-h-150 max-w-6xl flex-col items-center justify-center gap-12 px-4 py-16 lg:flex-row"
     >
       <div className="flex-1">
         <p className="mb-4 font-medium text-pink-500">

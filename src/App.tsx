@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Technology from "./components/Technology";
 import type { TechnologyType } from "./types";
+import Footer from "./components/Footer";
 
 const technologiesFetch = async (): Promise<TechnologyType[]> => {
 
@@ -22,6 +23,7 @@ function App() {
     <>
       <Navbar />
       <Hero />
+      
 
       <Suspense fallback={<h2>Loading....</h2>}>
 
@@ -29,6 +31,8 @@ function App() {
          selectedTechnologies={selectedTechnologies} setSelectedTechnologies={setSelectedTechnologies}/>
 
       </Suspense>
+
+      <Footer/>
     </>
   );
 }
