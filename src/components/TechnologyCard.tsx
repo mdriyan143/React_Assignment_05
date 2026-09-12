@@ -66,7 +66,7 @@ function TechnologyCard({ technology, selectedTechnologies, setSelectedTechnolog
 
       <button
         onClick={handleTechnologyAdd}
-        disabled={isAdded}
+        // disabled={isAdded}
 
         className={`mt-5 w-full rounded-lg px-4 py-2 font-medium text-white ${isAdded ? 
         "cursor-not-allowed opacity-50 brand-gradient" : "cursor-pointer brand-gradient"}`}>

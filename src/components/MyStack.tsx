@@ -1,4 +1,5 @@
 import type { TechnologyType } from "../types";
+import { toast } from "react-toastify";
 
 interface MyStackProps {
     selectedTechnologies: TechnologyType[];
@@ -12,10 +13,12 @@ function MyStack({ selectedTechnologies, setSelectedTechnologies }: MyStackProps
             (technology) => technology.id !== id);
 
         setSelectedTechnologies(remainingTechnologies);
+        toast.info("Technology removed from your stack");
     }
 
     function handleRemoveAll() {
         setSelectedTechnologies([]);
+         toast.error("All technologies removed from your stack");
     }
 
     return (
